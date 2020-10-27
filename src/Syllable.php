@@ -203,7 +203,7 @@ class Syllable
     /**
      * Options to use for HTML parsing by libxml
      * @param integer $libxmlOptions
-     * @see https://www.php.net/manual/de/libxml.constants.php 
+     * @see https://www.php.net/manual/de/libxml.constants.php
      */
     public function setLibxmlOptions($libxmlOptions)
     {
@@ -449,7 +449,7 @@ class Syllable
      */
     public function hyphenateHtml($html)
     {
-        $dom = new \DOMDocument();
+        $dom = new \IvoPetkov\HTML5DOMDocument();
         $dom->resolveExternals = true;
         $dom->loadHTML($html, $this->libxmlOptions);
 
